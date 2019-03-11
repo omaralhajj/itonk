@@ -40,7 +40,7 @@ namespace delopgave
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, delopgaveContext db)
         {
             if (env.IsDevelopment())
             {
@@ -50,7 +50,7 @@ namespace delopgave
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
+            db.Database.Migrate();
             app.UseStaticFiles();
             app.UseCookiePolicy();
 

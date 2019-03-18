@@ -25,7 +25,6 @@ namespace frontend
         public void ConfigureServices(IServiceCollection services)
         {
             var host = Configuration["HOST"];
-            var port = Configuration["PORT"];
 
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -37,7 +36,7 @@ namespace frontend
             services.AddHttpClient("backend", c =>
             {
                 //Remark below not using https but http
-                c.BaseAddress = new Uri("http://" + host + ":" + port + "/");
+                c.BaseAddress = new Uri("http://" + host);
 
                 c.DefaultRequestHeaders.Add("Accept", "application/json");
 

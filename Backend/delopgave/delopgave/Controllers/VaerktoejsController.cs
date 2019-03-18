@@ -2,151 +2,90 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using delopgave.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using delopgave.Models;
 
 namespace delopgave.Controllers
 {
-    public class VaerktoejsController : Controller
+    [Route("api/[controller]")]
+	[ApiController]
+    public class VaerktoejsController : ControllerBase
     {
         private readonly delopgaveContext _context;
 
         public VaerktoejsController(delopgaveContext context)
         {
             _context = context;
-        }
-
-        // GET: Vaerktoejs
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Vaerktoejs.ToListAsync());
-        }
-
-        // GET: Vaerktoejs/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
+			if (_context.Vaerktoejs.Count() == 0)
             {
-                return NotFound();
+                _context.Vaerktoejs.Add(new Vaerktoej { VtModel = "skruenøgle" });
+                _context.SaveChanges();
             }
-
-            var vaerktoej = await _context.Vaerktoejs
-                .FirstOrDefaultAsync(m => m.VtId == id);
-            if (vaerktoej == null)
-            {
-                return NotFound();
-            }
-
-            return View(vaerktoej);
         }
 
-        // GET: Vaerktoejs/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
+		// GET: api/Vaerktoej
+		[HttpGet]
+		public async Task<ActionResult<IEnumerable<Vaerktoej>>> GetVaerktoejs()
+		{
+			return await _context.Vaerktoejs.ToListAsync();
+		}
 
-        // POST: Vaerktoejs/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("LiggerIvkt,VtAnskaffet,VtFabrikat,VtId,VtModel,VtSerienr,VtType")] Vaerktoej vaerktoej)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(vaerktoej);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(vaerktoej);
-        }
+		// GET: api/Vaerktoej/5
+		[HttpGet("{id}")]
+		public async Task<ActionResult<Vaerktoej>> GetVaerktoej(int id)
+		{
+			var Vaerktoej = await _context.Vaerktoejs.FindAsync(id);
 
-        // GET: Vaerktoejs/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+			if (Vaerktoej == null)
+			{
+				return NotFound();
+			}
 
-            var vaerktoej = await _context.Vaerktoejs.FindAsync(id);
-            if (vaerktoej == null)
-            {
-                return NotFound();
-            }
-            return View(vaerktoej);
-        }
+			return Vaerktoej;
+		}
 
-        // POST: Vaerktoejs/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("LiggerIvkt,VtAnskaffet,VtFabrikat,VtId,VtModel,VtSerienr,VtType")] Vaerktoej vaerktoej)
-        {
-            if (id != vaerktoej.VtId)
-            {
-                return NotFound();
-            }
+		// POST: api/Vaerktoejs
+		[HttpPost]
+		public async Task<ActionResult<Vaerktoej>> PostVaerktoej(Vaerktoej item)
+		{
+			_context.Vaerktoejs.Add(item);
+			await _context.SaveChangesAsync();
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(vaerktoej);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!VaerktoejExists(vaerktoej.VtId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(vaerktoej);
-        }
+			return CreatedAtAction(nameof(GetVaerktoej), new { id = item.VtId }, item);
+		}
 
-        // GET: Vaerktoejs/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+		// PUT: api/Todo/5
+		[HttpPut("{id}")]
+		public async Task<IActionResult> PutVaerktoej(int id, Vaerktoej item)
+		{
+			if (id != item.VtId)
+			{
+				return BadRequest();
+			}
 
-            var vaerktoej = await _context.Vaerktoejs
-                .FirstOrDefaultAsync(m => m.VtId == id);
-            if (vaerktoej == null)
-            {
-                return NotFound();
-            }
+			_context.Entry(item).State = EntityState.Modified;
+			await _context.SaveChangesAsync();
 
-            return View(vaerktoej);
-        }
+			return NoContent();
+		}
 
-        // POST: Vaerktoejs/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var vaerktoej = await _context.Vaerktoejs.FindAsync(id);
-            _context.Vaerktoejs.Remove(vaerktoej);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+		// DELETE: api/Todo/5
+		[HttpDelete("{id}")]
+		public async Task<IActionResult> DeleteVaerktoej(int id)
+		{
+			var Vaerktoej = await _context.Vaerktoejs.FindAsync(id);
 
-        private bool VaerktoejExists(int id)
-        {
-            return _context.Vaerktoejs.Any(e => e.VtId == id);
-        }
+			if (Vaerktoej == null)
+			{
+				return NotFound();
+			}
+
+			_context.Vaerktoejs.Remove(Vaerktoej);
+			await _context.SaveChangesAsync();
+
+			return NoContent();
+		}
     }
 }

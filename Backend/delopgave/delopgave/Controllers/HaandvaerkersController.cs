@@ -2,151 +2,90 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using delopgave.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using delopgave.Models;
 
 namespace delopgave.Controllers
 {
-    public class HaandvaerkersController : Controller
+	[Route("api/[controller]")]
+	[ApiController]
+    public class HaandvaerkersController : ControllerBase
     {
         private readonly delopgaveContext _context;
 
         public HaandvaerkersController(delopgaveContext context)
         {
             _context = context;
-        }
-
-        // GET: Haandvaerkers
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Haandvaerkers.ToListAsync());
-        }
-
-        // GET: Haandvaerkers/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
+			if (_context.Haandvaerkers.Count() == 0)
             {
-                return NotFound();
+                _context.Haandvaerkers.Add(new Haandvaerker { HvFornavn = "Omar" });
+                _context.SaveChanges();
             }
-
-            var haandvaerker = await _context.Haandvaerkers
-                .FirstOrDefaultAsync(m => m.HaandvaerkerId == id);
-            if (haandvaerker == null)
-            {
-                return NotFound();
-            }
-
-            return View(haandvaerker);
         }
 
-        // GET: Haandvaerkers/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
+		// GET: api/Haandvaerker
+		[HttpGet]
+		public async Task<ActionResult<IEnumerable<Haandvaerker>>> GetHaandvaerkers()
+		{
+			return await _context.Haandvaerkers.ToListAsync();
+		}
 
-        // POST: Haandvaerkers/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("HvAnsaettelsedatao,HvEfternavn,HvFagomraade,HvFornavn,HaandvaerkerId")] Haandvaerker haandvaerker)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(haandvaerker);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(haandvaerker);
-        }
+		// GET: api/Haandvaerker/5
+		[HttpGet("{id}")]
+		public async Task<ActionResult<Haandvaerker>> GetHaandvaerker(int id)
+		{
+			var haandvaerker = await _context.Haandvaerkers.FindAsync(id);
 
-        // GET: Haandvaerkers/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+			if (haandvaerker == null)
+			{
+				return NotFound();
+			}
 
-            var haandvaerker = await _context.Haandvaerkers.FindAsync(id);
-            if (haandvaerker == null)
-            {
-                return NotFound();
-            }
-            return View(haandvaerker);
-        }
+			return haandvaerker;
+		}
 
-        // POST: Haandvaerkers/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("HvAnsaettelsedatao,HvEfternavn,HvFagomraade,HvFornavn,HaandvaerkerId")] Haandvaerker haandvaerker)
-        {
-            if (id != haandvaerker.HaandvaerkerId)
-            {
-                return NotFound();
-            }
+		// POST: api/Haandvaerkers
+		[HttpPost]
+		public async Task<ActionResult<Haandvaerker>> PostHaandvaerker(Haandvaerker item)
+		{
+			_context.Haandvaerkers.Add(item);
+			await _context.SaveChangesAsync();
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(haandvaerker);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!HaandvaerkerExists(haandvaerker.HaandvaerkerId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(haandvaerker);
-        }
+			return CreatedAtAction(nameof(GetHaandvaerker), new { id = item.HaandvaerkerId }, item);
+		}
 
-        // GET: Haandvaerkers/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+		// PUT: api/Todo/5
+		[HttpPut("{id}")]
+		public async Task<IActionResult> PutHaandvaerker(int id, Haandvaerker item)
+		{
+			if (id != item.HaandvaerkerId)
+			{
+				return BadRequest();
+			}
 
-            var haandvaerker = await _context.Haandvaerkers
-                .FirstOrDefaultAsync(m => m.HaandvaerkerId == id);
-            if (haandvaerker == null)
-            {
-                return NotFound();
-            }
+			_context.Entry(item).State = EntityState.Modified;
+			await _context.SaveChangesAsync();
 
-            return View(haandvaerker);
-        }
+			return NoContent();
+		}
 
-        // POST: Haandvaerkers/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var haandvaerker = await _context.Haandvaerkers.FindAsync(id);
-            _context.Haandvaerkers.Remove(haandvaerker);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+		// DELETE: api/Todo/5
+		[HttpDelete("{id}")]
+		public async Task<IActionResult> DeleteHaandvaerker(int id)
+		{
+			var haandvaerker = await _context.Haandvaerkers.FindAsync(id);
 
-        private bool HaandvaerkerExists(int id)
-        {
-            return _context.Haandvaerkers.Any(e => e.HaandvaerkerId == id);
-        }
+			if (haandvaerker == null)
+			{
+				return NotFound();
+			}
+
+			_context.Haandvaerkers.Remove(haandvaerker);
+			await _context.SaveChangesAsync();
+
+			return NoContent();
+		}
     }
 }

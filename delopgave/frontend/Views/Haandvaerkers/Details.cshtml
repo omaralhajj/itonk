@@ -1,0 +1,42 @@
+﻿@model frontend.Models.Haandvaerker
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Haandvaerker</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HvAnsaettelsedatao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HvAnsaettelsedatao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HvEfternavn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HvEfternavn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HvFagomraade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HvFagomraade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HvFornavn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HvFornavn)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.HaandvaerkerId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

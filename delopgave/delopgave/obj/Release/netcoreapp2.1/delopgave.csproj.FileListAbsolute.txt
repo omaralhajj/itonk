@@ -1,0 +1,14 @@
+C:\Users\sujee\Downloads\git\itonk\Backend\delopgave\delopgave\bin\Release\netcoreapp2.1\delopgave.deps.json
+C:\Users\sujee\Downloads\git\itonk\Backend\delopgave\delopgave\bin\Release\netcoreapp2.1\delopgave.runtimeconfig.json
+C:\Users\sujee\Downloads\git\itonk\Backend\delopgave\delopgave\bin\Release\netcoreapp2.1\delopgave.runtimeconfig.dev.json
+C:\Users\sujee\Downloads\git\itonk\Backend\delopgave\delopgave\bin\Release\netcoreapp2.1\delopgave.dll
+C:\Users\sujee\Downloads\git\itonk\Backend\delopgave\delopgave\bin\Release\netcoreapp2.1\delopgave.pdb
+C:\Users\sujee\Downloads\git\itonk\Backend\delopgave\delopgave\obj\Release\netcoreapp2.1\delopgave.csprojAssemblyReference.cache
+C:\Users\sujee\Downloads\git\itonk\Backend\delopgave\delopgave\obj\Release\netcoreapp2.1\delopgave.csproj.CoreCompileInputs.cache
+C:\Users\sujee\Downloads\git\itonk\Backend\delopgave\delopgave\obj\Release\netcoreapp2.1\delopgave.RazorAssemblyInfo.cache
+C:\Users\sujee\Downloads\git\itonk\Backend\delopgave\delopgave\obj\Release\netcoreapp2.1\delopgave.RazorAssemblyInfo.cs
+C:\Users\sujee\Downloads\git\itonk\Backend\delopgave\delopgave\obj\Release\netcoreapp2.1\delopgave.AssemblyInfoInputs.cache
+C:\Users\sujee\Downloads\git\itonk\Backend\delopgave\delopgave\obj\Release\netcoreapp2.1\delopgave.AssemblyInfo.cs
+C:\Users\sujee\Downloads\git\itonk\Backend\delopgave\delopgave\obj\Release\netcoreapp2.1\delopgave.RazorTargetAssemblyInfo.cache
+C:\Users\sujee\Downloads\git\itonk\Backend\delopgave\delopgave\obj\Release\netcoreapp2.1\delopgave.dll
+C:\Users\sujee\Downloads\git\itonk\Backend\delopgave\delopgave\obj\Release\netcoreapp2.1\delopgave.pdb

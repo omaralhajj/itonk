@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\omar-\\Desktop\\delopgave\\delopgave\\delopgave.csproj": {}
+    "C:\\Users\\omar-\\Desktop\\itonk\\delopgave\\delopgave\\delopgave.csproj": {}
   },
   "projects": {
-    "C:\\Users\\omar-\\Desktop\\delopgave\\delopgave\\delopgave.csproj": {
+    "C:\\Users\\omar-\\Desktop\\itonk\\delopgave\\delopgave\\delopgave.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\omar-\\Desktop\\delopgave\\delopgave\\delopgave.csproj",
+        "projectUniqueName": "C:\\Users\\omar-\\Desktop\\itonk\\delopgave\\delopgave\\delopgave.csproj",
         "projectName": "delopgave",
-        "projectPath": "C:\\Users\\omar-\\Desktop\\delopgave\\delopgave\\delopgave.csproj",
+        "projectPath": "C:\\Users\\omar-\\Desktop\\itonk\\delopgave\\delopgave\\delopgave.csproj",
         "packagesPath": "C:\\Users\\omar-\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\omar-\\Desktop\\delopgave\\delopgave\\obj\\",
+        "outputPath": "C:\\Users\\omar-\\Desktop\\itonk\\delopgave\\delopgave\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

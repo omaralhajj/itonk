@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\omar-\\Desktop\\delopgave\\frontend\\frontend.csproj": {}
+    "C:\\Users\\omar-\\Desktop\\itonk\\delopgave\\frontend\\frontend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\omar-\\Desktop\\delopgave\\frontend\\frontend.csproj": {
+    "C:\\Users\\omar-\\Desktop\\itonk\\delopgave\\frontend\\frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\omar-\\Desktop\\delopgave\\frontend\\frontend.csproj",
+        "projectUniqueName": "C:\\Users\\omar-\\Desktop\\itonk\\delopgave\\frontend\\frontend.csproj",
         "projectName": "frontend",
-        "projectPath": "C:\\Users\\omar-\\Desktop\\delopgave\\frontend\\frontend.csproj",
+        "projectPath": "C:\\Users\\omar-\\Desktop\\itonk\\delopgave\\frontend\\frontend.csproj",
         "packagesPath": "C:\\Users\\omar-\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\omar-\\Desktop\\delopgave\\frontend\\obj\\",
+        "outputPath": "C:\\Users\\omar-\\Desktop\\itonk\\delopgave\\frontend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

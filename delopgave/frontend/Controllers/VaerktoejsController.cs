@@ -24,7 +24,7 @@ namespace frontend.Controllers
         public async Task<IActionResult> Index()
         {
             var response = await client.GetAsync(
-            "api/Vaerktoejs");
+            "api/vaerktoejs");
 
             response.EnsureSuccessStatusCode();
 
@@ -42,7 +42,7 @@ namespace frontend.Controllers
             }
 
             var response = await client.GetAsync(
-            "api/Vaerktoejs/" + id);
+            "api/vaerktoejs/" + id);
 
             response.EnsureSuccessStatusCode();
 
@@ -68,11 +68,11 @@ namespace frontend.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("HvAnsaettelsedatao,HvEfternavn,HvFagomraade,HvFornavn,VaerktoejsId")] Vaerktoej Vaerktoej)
+        public async Task<IActionResult> Create([Bind("LiggerIvkt,VtAnskaffet,VtFabrikat,VtId,VtModel,VtSerienr,VtType")] Vaerktoej Vaerktoej)
         {
             if (ModelState.IsValid)
             {
-                var response = await client.PostAsJsonAsync("api/Vaerktoejs", Vaerktoej);
+                var response = await client.PostAsJsonAsync("api/vaerktoejs", Vaerktoej);
                 response.EnsureSuccessStatusCode();
                 return RedirectToAction(nameof(Index));
             }
@@ -88,7 +88,7 @@ namespace frontend.Controllers
             }
 
             var response = await client.GetAsync(
-            "api/Vaerktoejs/" + id);
+            "api/vaerktoejs/" + id);
 
             response.EnsureSuccessStatusCode();
 
@@ -107,7 +107,7 @@ namespace frontend.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("HvAnsaettelsedatao,HvEfternavn,HvFagomraade,HvFornavn,VaerktoejsId")] Vaerktoej Vaerktoej)
+        public async Task<IActionResult> Edit(int id, [Bind("LiggerIvkt,VtAnskaffet,VtFabrikat,VtId,VtModel,VtSerienr,VtType")] Vaerktoej Vaerktoej)
         {
             if (id != Vaerktoej.VtId)
             {
@@ -116,7 +116,7 @@ namespace frontend.Controllers
             if (ModelState.IsValid)
             {
 
-                var response = await client.PutAsJsonAsync("api/Vaerktoejs/" + id, Vaerktoej);
+                var response = await client.PutAsJsonAsync("api/vaerktoejs/" + id, Vaerktoej);
                 response.EnsureSuccessStatusCode();
                 return RedirectToAction(nameof(Index));
             }
@@ -133,7 +133,7 @@ namespace frontend.Controllers
                 return NotFound();
             }
 
-            var response = await client.GetAsync("api/Vaerktoejs/" + id);
+            var response = await client.GetAsync("api/vaerktoejs/" + id);
 
             response.EnsureSuccessStatusCode();
 
@@ -153,7 +153,7 @@ namespace frontend.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var response = await client.DeleteAsync("api/Vaerktoejs/" + id);
+            var response = await client.DeleteAsync("api/vaerktoejs/" + id);
             response.EnsureSuccessStatusCode();
             return RedirectToAction(nameof(Index));
         }

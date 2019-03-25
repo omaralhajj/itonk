@@ -20,11 +20,11 @@ namespace frontend.Controllers
             client = _clientFactory.CreateClient("backend");
         }
 
-        // GET: Vaerktoejskasses
+        // GET: Vaerktoejskasse
         public async Task<IActionResult> Index()
         {
             var response = await client.GetAsync(
-            "api/Vaerktoejskasses");
+            "api/vaerktoejskasses");
 
             response.EnsureSuccessStatusCode();
 
@@ -42,7 +42,7 @@ namespace frontend.Controllers
             }
 
             var response = await client.GetAsync(
-            "api/Vaerktoejskasses/" + id);
+            "api/vaerktoejskasses/" + id);
 
             response.EnsureSuccessStatusCode();
 
@@ -68,11 +68,11 @@ namespace frontend.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("HvAnsaettelsedatao,HvEfternavn,HvFagomraade,HvFornavn,VaerktoejskasseId")] Vaerktoejskasse Vaerktoejskasse)
+        public async Task<IActionResult> Create([Bind("VtkAnskaffet,VtkEjesAf,VtkFabrikat,VtkFarve,VtkId,VtkModel,VtkSerienummer")] Vaerktoejskasse Vaerktoejskasse)
         {
             if (ModelState.IsValid)
             {
-                var response = await client.PostAsJsonAsync("api/Vaerktoejskasse", Vaerktoejskasse);
+                var response = await client.PostAsJsonAsync("api/vaerktoejskasses", Vaerktoejskasse);
                 response.EnsureSuccessStatusCode();
                 return RedirectToAction(nameof(Index));
             }
@@ -88,7 +88,7 @@ namespace frontend.Controllers
             }
 
             var response = await client.GetAsync(
-            "api/Vaerktoejskasses/" + id);
+            "api/vaerktoejskasses/" + id);
 
             response.EnsureSuccessStatusCode();
 
@@ -107,7 +107,7 @@ namespace frontend.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("HvAnsaettelsedatao,HvEfternavn,HvFagomraade,HvFornavn,VaerktoejskasseId")] Vaerktoejskasse Vaerktoejskasse)
+        public async Task<IActionResult> Edit(int id, [Bind("VtkAnskaffet,VtkEjesAf,VtkFabrikat,VtkFarve,VtkId,VtkModel,VtkSerienummer")] Vaerktoejskasse Vaerktoejskasse)
         {
             if (id != Vaerktoejskasse.VtkId)
             {
@@ -116,7 +116,7 @@ namespace frontend.Controllers
             if (ModelState.IsValid)
             {
 
-                var response = await client.PutAsJsonAsync("api/Vaerktoejskasse/" + id, Vaerktoejskasse);
+                var response = await client.PutAsJsonAsync("api/vaerktoejskasses/" + id, Vaerktoejskasse);
                 response.EnsureSuccessStatusCode();
                 return RedirectToAction(nameof(Index));
             }
@@ -133,7 +133,7 @@ namespace frontend.Controllers
                 return NotFound();
             }
 
-            var response = await client.GetAsync("api/Vaerktoejskasse/" + id);
+            var response = await client.GetAsync("api/vaerktoejskasses/" + id);
 
             response.EnsureSuccessStatusCode();
 
@@ -153,7 +153,7 @@ namespace frontend.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var response = await client.DeleteAsync("api/Vaerktoejskasse/" + id);
+            var response = await client.DeleteAsync("api/vaerktoejskasses/" + id);
             response.EnsureSuccessStatusCode();
             return RedirectToAction(nameof(Index));
         }

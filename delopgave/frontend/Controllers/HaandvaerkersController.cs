@@ -72,7 +72,7 @@ namespace frontend.Controllers
         {
             if (ModelState.IsValid)
             {
-                var response = await client.PostAsJsonAsync("api/haandvaerker", haandvaerker);
+                var response = await client.PostAsJsonAsync("api/haandvaerkers", haandvaerker);
                 response.EnsureSuccessStatusCode();
                 return RedirectToAction(nameof(Index));
             }
@@ -116,7 +116,7 @@ namespace frontend.Controllers
             if (ModelState.IsValid)
             {
 
-                var response = await client.PutAsJsonAsync("api/haandvaerker/" + id, haandvaerker);
+                var response = await client.PutAsJsonAsync("api/haandvaerkers/" + id, haandvaerker);
                 response.EnsureSuccessStatusCode();
                 return RedirectToAction(nameof(Index));
             }
@@ -133,7 +133,7 @@ namespace frontend.Controllers
                 return NotFound();
             }
 
-            var response = await client.GetAsync("api/haandvaerker/" + id);
+            var response = await client.GetAsync("api/haandvaerkers/" + id);
 
             response.EnsureSuccessStatusCode();
 
@@ -153,7 +153,7 @@ namespace frontend.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var response = await client.DeleteAsync("api/haandvaerker/" + id);
+            var response = await client.DeleteAsync("api/haandvaerkers/" + id);
             response.EnsureSuccessStatusCode();
             return RedirectToAction(nameof(Index));
         }

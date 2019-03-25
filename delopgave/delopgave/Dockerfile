@@ -2,7 +2,6 @@
 #For more information, please see https://aka.ms/containercompat
 
 FROM gcr.io/google-appengine/aspnetcore:2.1
-ADD ./ /app
-ENV ASPNETCORE_URLS=http://*:${PORT}
+ADD dist /app
 WORKDIR /app
 ENTRYPOINT [ "dotnet", "delopgave.dll"]

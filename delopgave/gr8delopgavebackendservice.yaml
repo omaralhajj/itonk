@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: 2019-03-14T16:17:45Z
+  labels:
+    run: gr8delopgavebackend
+  name: gr8delopgavebackend
+  namespace: default
+spec:
+  ports:
+  - nodePort: 31058
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    run: gr8delopgavebackend
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}

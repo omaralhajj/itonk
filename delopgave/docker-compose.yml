@@ -15,7 +15,7 @@ services:
   backend:
     build:
         context: .
-        dockerfile: delopgave/Dockerfile
+        dockerfile: delopgave/bin/Release/netcoreapp2.1/Dockerfile
     depends_on:
         - db
     ports:
@@ -24,7 +24,7 @@ services:
   frontend:
     build:
         context: .
-        dockerfile: frontend/Dockerfile
+        dockerfile: frontend/bin/Release/netcoreapp2.1/Dockerfile
     depends_on:
         - db
     ports:

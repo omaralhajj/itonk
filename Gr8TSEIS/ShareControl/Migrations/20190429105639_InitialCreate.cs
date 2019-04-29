@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace StockBroker.Migrations
+namespace ShareControl.Migrations
 {
     public partial class InitialCreate : Migration
     {

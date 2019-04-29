@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockTransaction", "StockTr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxControl", "TaxControl\TaxControl.csproj", "{14D10EEC-01BB-4D4D-AE7B-0D3D6D0BD5D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank", "Bank\Bank.csproj", "{33752E17-8464-401C-951D-16B3F9F73C65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bank", "Bank\Bank.csproj", "{33752E17-8464-401C-951D-16B3F9F73C65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{92EE7913-07BA-4D10-987A-87A85410E499}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{33752E17-8464-401C-951D-16B3F9F73C65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33752E17-8464-401C-951D-16B3F9F73C65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33752E17-8464-401C-951D-16B3F9F73C65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92EE7913-07BA-4D10-987A-87A85410E499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92EE7913-07BA-4D10-987A-87A85410E499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92EE7913-07BA-4D10-987A-87A85410E499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92EE7913-07BA-4D10-987A-87A85410E499}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

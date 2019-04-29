@@ -4,11 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace StockBroker.Models
+namespace ShareControl.Models
 {
-    public class DBmodel : DbContext
+    public class ShareControllerContext : DbContext
     {
-        public DBmodel(DbContextOptions<DBmodel> options)
+        public ShareControllerContext(DbContextOptions<ShareControllerContext> options)
             : base(options)
         {
         }

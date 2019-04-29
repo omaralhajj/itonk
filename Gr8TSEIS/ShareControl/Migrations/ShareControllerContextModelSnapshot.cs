@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using StockBroker.Models;
+using ShareControl.Models;
 
-namespace StockBroker.Migrations
+namespace ShareControl.Migrations
 {
-    [DbContext(typeof(DBmodel))]
-    partial class DBmodelModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ShareControllerContext))]
+    partial class ShareControllerContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -19,7 +19,7 @@ namespace StockBroker.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("StockBroker.Models.Share", b =>
+            modelBuilder.Entity("ShareControl.Models.Share", b =>
                 {
                     b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd();
@@ -35,7 +35,7 @@ namespace StockBroker.Migrations
                     b.ToTable("Shares");
                 });
 
-            modelBuilder.Entity("StockBroker.Models.Trader", b =>
+            modelBuilder.Entity("ShareControl.Models.Trader", b =>
                 {
                     b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd();
@@ -47,7 +47,7 @@ namespace StockBroker.Migrations
                     b.ToTable("Traders");
                 });
 
-            modelBuilder.Entity("StockBroker.Models.Transaction", b =>
+            modelBuilder.Entity("ShareControl.Models.Transaction", b =>
                 {
                     b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd();

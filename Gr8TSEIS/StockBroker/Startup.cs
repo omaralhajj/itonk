@@ -66,9 +66,9 @@ namespace StockBroker
 
             });
 
-            var connection = @"Server=(localdb)\mssqllocaldb;Database=gr8ShareControlDB;Trusted_Connection=True;ConnectRetryCount=0";
-            services.AddDbContext<DBmodel>
-                (options => options.UseSqlServer(connection));
+            //var connection = @"Server=(localdb)\mssqllocaldb;Database=gr8ShareControlDB;Trusted_Connection=True;ConnectRetryCount=0";
+            //services.AddDbContext<DBmodel>
+            //    (options => options.UseSqlServer(connection));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 

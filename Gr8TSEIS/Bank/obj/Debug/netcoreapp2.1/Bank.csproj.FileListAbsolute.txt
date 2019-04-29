@@ -1,0 +1,3 @@
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\obj\Debug\netcoreapp2.1\Bank.csproj.CoreCompileInputs.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\obj\Debug\netcoreapp2.1\Bank.AssemblyInfoInputs.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\obj\Debug\netcoreapp2.1\Bank.AssemblyInfo.cs

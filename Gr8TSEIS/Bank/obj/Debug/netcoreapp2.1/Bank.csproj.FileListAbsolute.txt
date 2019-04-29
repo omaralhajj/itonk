@@ -1,3 +1,15 @@
 C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\obj\Debug\netcoreapp2.1\Bank.csproj.CoreCompileInputs.cache
 C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\obj\Debug\netcoreapp2.1\Bank.AssemblyInfoInputs.cache
 C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\obj\Debug\netcoreapp2.1\Bank.AssemblyInfo.cs
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\bin\Debug\netcoreapp2.1\Bank.deps.json
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\bin\Debug\netcoreapp2.1\Bank.runtimeconfig.json
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\bin\Debug\netcoreapp2.1\Bank.runtimeconfig.dev.json
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\bin\Debug\netcoreapp2.1\Bank.dll
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\obj\Debug\netcoreapp2.1\Bank.csprojAssemblyReference.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\obj\Debug\netcoreapp2.1\Bank.RazorAssemblyInfo.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\obj\Debug\netcoreapp2.1\Bank.RazorAssemblyInfo.cs
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\obj\Debug\netcoreapp2.1\Bank.RazorTargetAssemblyInfo.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\bin\Debug\netcoreapp2.1\Bank.pdb
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\obj\Debug\netcoreapp2.1\Bank.dll
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\Bank\obj\Debug\netcoreapp2.1\Bank.pdb

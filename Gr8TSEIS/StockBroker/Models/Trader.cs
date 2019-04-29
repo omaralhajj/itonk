@@ -9,6 +9,6 @@ namespace StockBroker.Models
     public class Trader
     {
         public Guid ID { get; set; }
-        public decimal Money { get; set; }
+        public decimal Credit { get; set; }
     }
 }

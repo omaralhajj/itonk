@@ -1,0 +1,14 @@
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\TaxControl\bin\Debug\netcoreapp2.1\TaxControl.deps.json
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\TaxControl\bin\Debug\netcoreapp2.1\TaxControl.runtimeconfig.json
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\TaxControl\bin\Debug\netcoreapp2.1\TaxControl.runtimeconfig.dev.json
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\TaxControl\bin\Debug\netcoreapp2.1\TaxControl.dll
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\TaxControl\obj\Debug\netcoreapp2.1\TaxControl.csprojAssemblyReference.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\TaxControl\obj\Debug\netcoreapp2.1\TaxControl.csproj.CoreCompileInputs.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\TaxControl\obj\Debug\netcoreapp2.1\TaxControl.RazorAssemblyInfo.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\TaxControl\obj\Debug\netcoreapp2.1\TaxControl.RazorAssemblyInfo.cs
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\TaxControl\obj\Debug\netcoreapp2.1\TaxControl.AssemblyInfoInputs.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\TaxControl\obj\Debug\netcoreapp2.1\TaxControl.AssemblyInfo.cs
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\TaxControl\obj\Debug\netcoreapp2.1\TaxControl.RazorTargetAssemblyInfo.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\TaxControl\bin\Debug\netcoreapp2.1\TaxControl.pdb
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\TaxControl\obj\Debug\netcoreapp2.1\TaxControl.dll
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\TaxControl\obj\Debug\netcoreapp2.1\TaxControl.pdb

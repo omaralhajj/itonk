@@ -11,7 +11,7 @@ namespace StockBroker.Models
         public Guid BuyerID { get; set; }
         public Guid ShareID { get; set; }
         public Guid SellerID { get; set; }
-        public decimal MoneyValue { get; set; }
+        public decimal TransferValue { get; set; }
         public DateTime TimeStamp { get; set; }
     }
 }

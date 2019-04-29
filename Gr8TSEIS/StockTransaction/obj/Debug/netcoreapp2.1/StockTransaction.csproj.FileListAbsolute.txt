@@ -1,3 +1,15 @@
 C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTransaction\obj\Debug\netcoreapp2.1\StockTransaction.csproj.CoreCompileInputs.cache
 C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTransaction\obj\Debug\netcoreapp2.1\StockTransaction.AssemblyInfoInputs.cache
 C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTransaction\obj\Debug\netcoreapp2.1\StockTransaction.AssemblyInfo.cs
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTransaction\bin\Debug\netcoreapp2.1\StockTransaction.deps.json
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTransaction\bin\Debug\netcoreapp2.1\StockTransaction.runtimeconfig.json
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTransaction\bin\Debug\netcoreapp2.1\StockTransaction.runtimeconfig.dev.json
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTransaction\bin\Debug\netcoreapp2.1\StockTransaction.dll
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTransaction\obj\Debug\netcoreapp2.1\StockTransaction.csprojAssemblyReference.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTransaction\obj\Debug\netcoreapp2.1\StockTransaction.RazorAssemblyInfo.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTransaction\obj\Debug\netcoreapp2.1\StockTransaction.RazorAssemblyInfo.cs
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTransaction\obj\Debug\netcoreapp2.1\StockTransaction.RazorTargetAssemblyInfo.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTransaction\bin\Debug\netcoreapp2.1\StockTransaction.pdb
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTransaction\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTransaction\obj\Debug\netcoreapp2.1\StockTransaction.dll
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTransaction\obj\Debug\netcoreapp2.1\StockTransaction.pdb

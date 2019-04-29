@@ -1,0 +1,14 @@
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTrader\bin\Debug\netcoreapp2.1\StockTrader.deps.json
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTrader\bin\Debug\netcoreapp2.1\StockTrader.runtimeconfig.json
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTrader\bin\Debug\netcoreapp2.1\StockTrader.runtimeconfig.dev.json
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTrader\bin\Debug\netcoreapp2.1\StockTrader.dll
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTrader\obj\Debug\netcoreapp2.1\StockTrader.csprojAssemblyReference.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTrader\obj\Debug\netcoreapp2.1\StockTrader.csproj.CoreCompileInputs.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTrader\obj\Debug\netcoreapp2.1\StockTrader.RazorAssemblyInfo.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTrader\obj\Debug\netcoreapp2.1\StockTrader.RazorAssemblyInfo.cs
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTrader\obj\Debug\netcoreapp2.1\StockTrader.AssemblyInfoInputs.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTrader\obj\Debug\netcoreapp2.1\StockTrader.AssemblyInfo.cs
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTrader\obj\Debug\netcoreapp2.1\StockTrader.RazorTargetAssemblyInfo.cache
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTrader\bin\Debug\netcoreapp2.1\StockTrader.pdb
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTrader\obj\Debug\netcoreapp2.1\StockTrader.dll
+C:\Users\sujee\Downloads\git\itonk\Gr8TSEIS\StockTrader\obj\Debug\netcoreapp2.1\StockTrader.pdb

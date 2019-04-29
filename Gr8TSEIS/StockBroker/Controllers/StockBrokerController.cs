@@ -12,37 +12,16 @@ namespace StockBroker.Controllers
 {
     public class StockBrokerController : Controller
     {
-        public HttpClient HttpClient { get; }
+        private readonly IHttpClientFactory _clientFactory;
+        private readonly HttpClient client;
 
-        [HttpPut()]
-        public async Task<Share> UpdateShare(Guid TraderID, Guid ShareID)
+        public StockBrokerController(IHttpClientFactory clientFactory)
         {
-            var tid = TraderID;
-            var sid = ShareID;
-
-            var result = new Share();
-
-            foreach (var partition in partitions)
-            {
-             
-       
-                var httpContent = JsonConvert.SerializeObject(share);
-                var byteContent = new ByteArrayContent(System.Text.Encoding.UTF8.GetBytes(httpContent));
-                byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-
-                using (var response = await HttpClient.PutAsync(proxyUrl, byteContent))
-                {
-                    if (!response.IsSuccessStatusCode)
-                    {
-                        throw new StockBrokerException((HttpErrorCode) response.StatusCode, response.ReasonPhrase);
-                    }
-
-                    result = JsonConvert.DeserializeObject<Share>(
-                        await response.Content.ReadAsStringAsync()
-                    );
-                }
-            }
-            return result;
+            _clientFactory = clientFactory;
+            client = _clientFactory.CreateClient("stockbroker");
         }
+
+
+
     }
 }

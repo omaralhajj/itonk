@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: 2019-03-14T16:17:45Z
+  labels:
+    run: gr8stockbroker
+  name: gr8stockbroker
+  namespace: default
+spec:
+  ports:
+  - nodePort: 31058
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    run: gr8stockbroker
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}

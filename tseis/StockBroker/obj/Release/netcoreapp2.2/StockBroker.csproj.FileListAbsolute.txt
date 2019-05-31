@@ -1,0 +1,14 @@
+C:\Users\omar-\Desktop\itonk\tseis\StockBroker\bin\Release\netcoreapp2.2\StockBroker.deps.json
+C:\Users\omar-\Desktop\itonk\tseis\StockBroker\bin\Release\netcoreapp2.2\StockBroker.runtimeconfig.json
+C:\Users\omar-\Desktop\itonk\tseis\StockBroker\bin\Release\netcoreapp2.2\StockBroker.runtimeconfig.dev.json
+C:\Users\omar-\Desktop\itonk\tseis\StockBroker\bin\Release\netcoreapp2.2\StockBroker.dll
+C:\Users\omar-\Desktop\itonk\tseis\StockBroker\bin\Release\netcoreapp2.2\StockBroker.pdb
+C:\Users\omar-\Desktop\itonk\tseis\StockBroker\obj\Release\netcoreapp2.2\StockBroker.csprojAssemblyReference.cache
+C:\Users\omar-\Desktop\itonk\tseis\StockBroker\obj\Release\netcoreapp2.2\StockBroker.csproj.CoreCompileInputs.cache
+C:\Users\omar-\Desktop\itonk\tseis\StockBroker\obj\Release\netcoreapp2.2\StockBroker.RazorAssemblyInfo.cache
+C:\Users\omar-\Desktop\itonk\tseis\StockBroker\obj\Release\netcoreapp2.2\StockBroker.RazorAssemblyInfo.cs
+C:\Users\omar-\Desktop\itonk\tseis\StockBroker\obj\Release\netcoreapp2.2\StockBroker.AssemblyInfoInputs.cache
+C:\Users\omar-\Desktop\itonk\tseis\StockBroker\obj\Release\netcoreapp2.2\StockBroker.AssemblyInfo.cs
+C:\Users\omar-\Desktop\itonk\tseis\StockBroker\obj\Release\netcoreapp2.2\StockBroker.RazorTargetAssemblyInfo.cache
+C:\Users\omar-\Desktop\itonk\tseis\StockBroker\obj\Release\netcoreapp2.2\StockBroker.dll
+C:\Users\omar-\Desktop\itonk\tseis\StockBroker\obj\Release\netcoreapp2.2\StockBroker.pdb

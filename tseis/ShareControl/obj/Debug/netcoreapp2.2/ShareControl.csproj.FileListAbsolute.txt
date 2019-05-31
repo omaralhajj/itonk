@@ -1,0 +1,14 @@
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\bin\Debug\netcoreapp2.2\ShareControl.deps.json
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\bin\Debug\netcoreapp2.2\ShareControl.runtimeconfig.json
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\bin\Debug\netcoreapp2.2\ShareControl.runtimeconfig.dev.json
+c:\Users\omar-\Desktop\itonk\tseis\ShareControl\bin\Debug\netcoreapp2.2\ShareControl.dll
+c:\Users\omar-\Desktop\itonk\tseis\ShareControl\bin\Debug\netcoreapp2.2\ShareControl.pdb
+c:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Debug\netcoreapp2.2\ShareControl.csprojAssemblyReference.cache
+c:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Debug\netcoreapp2.2\ShareControl.csproj.CoreCompileInputs.cache
+c:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Debug\netcoreapp2.2\ShareControl.RazorAssemblyInfo.cache
+c:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Debug\netcoreapp2.2\ShareControl.RazorAssemblyInfo.cs
+c:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Debug\netcoreapp2.2\ShareControl.AssemblyInfoInputs.cache
+c:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Debug\netcoreapp2.2\ShareControl.AssemblyInfo.cs
+c:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Debug\netcoreapp2.2\ShareControl.RazorTargetAssemblyInfo.cache
+c:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Debug\netcoreapp2.2\ShareControl.dll
+c:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Debug\netcoreapp2.2\ShareControl.pdb

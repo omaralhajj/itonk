@@ -9,9 +9,9 @@ metadata:
 spec:
   ports:
   - nodePort: 31059
-    port: 8080
+    port: 80
     protocol: TCP
-    targetPort: 8080
+    targetPort: 80
   selector:
     run: gr8sharecontrol
   sessionAffinity: None

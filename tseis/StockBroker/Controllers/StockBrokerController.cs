@@ -26,63 +26,34 @@ namespace StockBroker.Controllers
         }
         
         [HttpPut("traders/{buyerId}/shares/buy")]
-        public async Task<IActionResult> BuyShare([FromRoute] Guid buyerId, [FromBody] IEnumerable<Share> shares)
+        public async Task<IActionResult> BuyShare([FromRoute] int buyerId, [FromBody] IEnumerable<Share> shares)
         {
             try
             {
-                // if (shares.Any(x => x.TraderID == buyerId))
-                // {
-                //     throw new StockBrokerException(HttpErrorCode.BadRequest,
-                //         $"One or more of the provided shares already belongs to trader '{buyerId}'.");
-                // }
                 var buyer = await GetTrader(buyerId);
-
                 var totalShareValue = shares.Select(x => x.Value).Sum();
-
-                // if (buyer.Credit < totalShareValue)
-                // {
-                //     throw new StockBrokerException(HttpErrorCode.BadRequest,
-                //         $"Trader '{buyer.Id}' does not have enough credit to buy the provided shares. " +
-                //         $"Total value of shares is {totalShareValue} - trader's credit is {buyer.Credit}.");
-                // }
-
                 var transactions = PrepareTransactions(shares, buyer);
-
                 var updatedShares = await UpdateShares(shares, buyer.ID);
-
                 buyer.Credit -= totalShareValue;
                 var updatedBuyer = await UpdateBuyer(buyer);
                 var updatedSellers = await UpdateSellers(shares);
-
                 var newTransactions = await RegisterTransactions(transactions);
 
                 return Ok(updatedShares);
             }
 
-            // catch (StockBrokerException e)
-            // {
-            //     return StatusCode((int)e.HttpErrorCode, e.Message);
-            // }
-
             catch (Exception e)
             {
-                //return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
                 return StatusCode(500);
             }
         }
 
         [HttpPut("traders/{sellerId}/shares/{shareId}/sell")]
-        public async Task<IActionResult> SellShare([FromRoute] Guid sellerId, [FromRoute] Guid shareId,
+        public async Task<IActionResult> SellShare([FromRoute] int sellerId, [FromRoute] int shareId,
             [FromBody] Share share)
         {
             try
             {
-                // if (share.TraderId != sellerId)
-                // {
-                //     throw new StockBrokerException(HttpErrorCode.BadRequest,
-                //         $"Share '{shareId}' does not belong to trader '{sellerId}'.");
-                // }
-
                 share.SharesForSale = true;
 
                 var updatedShare = await UpdateShare(share, shareId);
@@ -90,14 +61,8 @@ namespace StockBroker.Controllers
                 return Ok(updatedShare);
             }
 
-            // catch (StockBrokerException e)
-            // {
-            //     return StatusCode((int)e.HttpErrorCode, e.Message);
-            // }
-
             catch (Exception e)
             {
-               // return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
                 return StatusCode(500);
             }
         }
@@ -114,15 +79,9 @@ namespace StockBroker.Controllers
                 .ToList();
         }
 
-        private async Task<IEnumerable<Share>> UpdateShares(IEnumerable<Share> shares, Guid traderId)
+        private async Task<IEnumerable<Share>> UpdateShares(IEnumerable<Share> shares, int traderId)
         {
             var result = new List<Share>();
-
-            /* if (shares.Any(x => !x.ForSale))
-            {
-                throw new StockBrokerException(HttpErrorCode.BadRequest,
-                    "One or more of the given shares are not for sale.");
-            } */
 
             foreach (var share in shares)
             {
@@ -139,10 +98,6 @@ namespace StockBroker.Controllers
 
                 using (var response = await shareControlClient.PutAsync($"/api/v1/shares/{share.ID}", byteContent))
                 {
-                   /*  if (!response.IsSuccessStatusCode)
-                    {
-                        throw new StockBrokerException((HttpErrorCode)response.StatusCode, response.ReasonPhrase);
-                    } */
 
                     result.Add(JsonConvert.DeserializeObject<Share>(
                         await response.Content.ReadAsStringAsync())
@@ -160,11 +115,6 @@ namespace StockBroker.Controllers
 
             using (var response = await traderControlClient.PutAsync($"/api/v1/traders/{trader.ID}", byteContent))
             {
-                /* if (!response.IsSuccessStatusCode)
-                {
-                    throw new StockBrokerException((HttpErrorCode)response.StatusCode, response.ReasonPhrase);
-                } */
-
                 result = JsonConvert.DeserializeObject<Trader>(
                     await response.Content.ReadAsStringAsync()
                 );
@@ -186,11 +136,6 @@ namespace StockBroker.Controllers
 
                 using (var response = await traderControlClient.PutAsync($"/api/v1/traders/{trader.ID}", byteContent))
                 {
-                    /* if (!response.IsSuccessStatusCode)
-                    {
-                        throw new StockBrokerException((HttpErrorCode)response.StatusCode, response.ReasonPhrase);
-                    } */
-
                     if (!result.Select(x => x.ID).Contains(trader.ID))
                     {
                         result.Add(JsonConvert.DeserializeObject<Trader>(
@@ -214,11 +159,6 @@ namespace StockBroker.Controllers
 
                 using (var response = await transactionControlClient.PostAsync("/api/v1/transactions", byteContent))
                 {
-                    /* if (!response.IsSuccessStatusCode)
-                    {
-                        throw new StockBrokerException((HttpErrorCode)response.StatusCode, response.ReasonPhrase);
-                    } */
-
                     result.Add(JsonConvert.DeserializeObject<Transaction>(
                         await response.Content.ReadAsStringAsync())
                     );
@@ -227,7 +167,7 @@ namespace StockBroker.Controllers
             return result;
         }
 
-        private async Task<Trader> GetTrader(Guid traderId)
+        private async Task<Trader> GetTrader(int traderId)
         {
             var result = new Trader();
      
@@ -239,7 +179,7 @@ namespace StockBroker.Controllers
             return result;
         }
 
-        private async Task<Share> UpdateShare(Share share, Guid shareId)
+        private async Task<Share> UpdateShare(Share share, int shareId)
         {
             var result = new Share();
             var httpContent = JsonConvert.SerializeObject(share);

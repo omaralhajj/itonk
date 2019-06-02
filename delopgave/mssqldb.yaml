@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    purpose: gr8sharedb
-  name: gr8sharedb
+    purpose: gr8mssqlserver
+  name: gr8mssqlserver
 spec:
   containers:
   - env:
@@ -13,7 +13,7 @@ spec:
       value: "Y"
     image: mcr.microsoft.com/mssql/server:2017-latest
     imagePullPolicy: IfNotPresent
-    name: gr8sharedb
+    name: gr8mssqlserver
     ports:
     - containerPort: 1433
       protocol: TCP

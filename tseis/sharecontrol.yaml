@@ -27,7 +27,7 @@ spec:
         run: gr8sharecontrol
     spec:
       containers:
-      - image: mromar/sharecontrol
+      - image: docker.io/mromar/sharecontrol:latest
         imagePullPolicy: Always
         name: gr8sharecontrol
         ports:

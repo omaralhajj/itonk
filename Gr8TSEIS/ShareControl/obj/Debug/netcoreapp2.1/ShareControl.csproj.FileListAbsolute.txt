@@ -26,3 +26,4 @@ C:\Users\omar-\Desktop\itonk\Gr8TSEIS\ShareControl\obj\Debug\netcoreapp2.1\Share
 C:\Users\omar-\Desktop\itonk\Gr8TSEIS\ShareControl\obj\Debug\netcoreapp2.1\ShareControl.RazorTargetAssemblyInfo.cache
 C:\Users\omar-\Desktop\itonk\Gr8TSEIS\ShareControl\obj\Debug\netcoreapp2.1\ShareControl.dll
 C:\Users\omar-\Desktop\itonk\Gr8TSEIS\ShareControl\obj\Debug\netcoreapp2.1\ShareControl.pdb
+C:\Users\omar-\Desktop\itonk\Gr8TSEIS\ShareControl\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs

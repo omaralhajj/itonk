@@ -1,7 +1,5 @@
 {
-  "ProjectFilePath": "c:\\Users\\Omar\\Desktop\\itonk\\delopgave\\frontend\\frontend.csproj",
-  "TargetFramework": "netcoreapp2.1",
-  "TagHelpers": [],
+  "FilePath": "c:\\Users\\omar-\\Desktop\\itonk\\delopgave\\frontend\\frontend.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -10,5 +8,137 @@
         "ExtensionName": "MVC-2.1"
       }
     ]
-  }
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 703
+  },
+  "RootNamespace": "frontend",
+  "Documents": [
+    {
+      "FilePath": "Views\\Vaerktoejs\\Index.cshtml",
+      "TargetPath": "Views\\Vaerktoejs\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Vaerktoejskasses\\Details.cshtml",
+      "TargetPath": "Views\\Vaerktoejskasses\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Vaerktoejs\\Edit.cshtml",
+      "TargetPath": "Views\\Vaerktoejs\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Vaerktoejs\\Delete.cshtml",
+      "TargetPath": "Views\\Vaerktoejs\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Vaerktoejs\\Details.cshtml",
+      "TargetPath": "Views\\Vaerktoejs\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Shared\\_CookieConsentPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Home\\About.cshtml",
+      "TargetPath": "Views\\Home\\About.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Haandvaerkers\\Details.cshtml",
+      "TargetPath": "Views\\Haandvaerkers\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Vaerktoejs\\Create.cshtml",
+      "TargetPath": "Views\\Vaerktoejs\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Home\\Contact.cshtml",
+      "TargetPath": "Views\\Home\\Contact.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Haandvaerkers\\Index.cshtml",
+      "TargetPath": "Views\\Haandvaerkers\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Haandvaerkers\\Edit.cshtml",
+      "TargetPath": "Views\\Haandvaerkers\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Vaerktoejskasses\\Index.cshtml",
+      "TargetPath": "Views\\Vaerktoejskasses\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Vaerktoejskasses\\Create.cshtml",
+      "TargetPath": "Views\\Vaerktoejskasses\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Vaerktoejskasses\\Edit.cshtml",
+      "TargetPath": "Views\\Vaerktoejskasses\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Haandvaerkers\\Create.cshtml",
+      "TargetPath": "Views\\Haandvaerkers\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Vaerktoejskasses\\Delete.cshtml",
+      "TargetPath": "Views\\Vaerktoejskasses\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Haandvaerkers\\Delete.cshtml",
+      "TargetPath": "Views\\Haandvaerkers\\Delete.cshtml",
+      "FileKind": "mvc"
+    }
+  ]
 }

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28917.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareControl", "ShareControl\ShareControl.csproj", "{63A34F6F-E967-4AF5-8D7F-5EEBDB9E1A5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockBroker", "StockBroker\StockBroker.csproj", "{FDC313F1-B755-4DD1-8699-A13922E948E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63A34F6F-E967-4AF5-8D7F-5EEBDB9E1A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63A34F6F-E967-4AF5-8D7F-5EEBDB9E1A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63A34F6F-E967-4AF5-8D7F-5EEBDB9E1A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63A34F6F-E967-4AF5-8D7F-5EEBDB9E1A5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDC313F1-B755-4DD1-8699-A13922E948E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDC313F1-B755-4DD1-8699-A13922E948E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDC313F1-B755-4DD1-8699-A13922E948E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDC313F1-B755-4DD1-8699-A13922E948E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66317903-C3B7-4A05-9DD0-26D5D06CA5B2}
+	EndGlobalSection
+EndGlobal

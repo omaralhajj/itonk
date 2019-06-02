@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ShareControl.Models;
 using ShareControl.Context;
@@ -31,7 +30,7 @@ namespace ShareControl.Controllers
 		// GET: api/v1/traders/{traderId}/shares
 		[HttpGet("traders/{traderId}/shares")]
 		public async Task<ActionResult<IEnumerable<Share>>> GetSharesByTraderId(int traderId) {
-			return await _context.Shares.Where(x => x.TraderID == traderId).ToListAsync();
+			return await _context.Shares.Where(share => share.TraderID == traderId).ToListAsync();
 		}
 
 		// GET: api/v1/shares/id

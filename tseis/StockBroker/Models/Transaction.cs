@@ -7,10 +7,10 @@ namespace StockBroker.Models
 {
     public class Transaction
     {
-        public Guid ID { get; set; }
-        public Guid BuyerID { get; set; }
-        public Guid ShareID { get; set; }
-        public Guid SellerID { get; set; }
+        public int ID { get; set; }
+        public int BuyerID { get; set; }
+        public int ShareID { get; set; }
+        public int SellerID { get; set; }
         public decimal TransferValue { get; set; }
         public DateTime TimeStamp { get; set; }
     }

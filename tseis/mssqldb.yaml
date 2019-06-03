@@ -4,6 +4,7 @@ metadata:
   labels:
     purpose: gr8sharedb
   name: gr8sharedb
+  namespace: gr8tseis
 spec:
   containers:
   - env:

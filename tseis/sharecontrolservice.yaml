@@ -5,7 +5,7 @@ metadata:
   labels:
     run: gr8sharecontrol
   name: gr8sharecontrol
-  namespace: default
+  namespace: gr8tseis
 spec:
   ports:
   - nodePort: 31059

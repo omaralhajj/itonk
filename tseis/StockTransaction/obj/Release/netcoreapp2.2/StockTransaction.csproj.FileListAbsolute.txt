@@ -1,0 +1,3 @@
+C:\Users\Omar\Desktop\itonk\tseis\StockTransaction\obj\Release\netcoreapp2.2\StockTransaction.csproj.CoreCompileInputs.cache
+C:\Users\Omar\Desktop\itonk\tseis\StockTransaction\obj\Release\netcoreapp2.2\StockTransaction.AssemblyInfoInputs.cache
+C:\Users\Omar\Desktop\itonk\tseis\StockTransaction\obj\Release\netcoreapp2.2\StockTransaction.AssemblyInfo.cs

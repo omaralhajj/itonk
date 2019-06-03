@@ -1,0 +1,3 @@
+C:\Users\Omar\Desktop\itonk\tseis\StockTrader\obj\Release\netcoreapp2.2\StockTrader.csproj.CoreCompileInputs.cache
+C:\Users\Omar\Desktop\itonk\tseis\StockTrader\obj\Release\netcoreapp2.2\StockTrader.AssemblyInfoInputs.cache
+C:\Users\Omar\Desktop\itonk\tseis\StockTrader\obj\Release\netcoreapp2.2\StockTrader.AssemblyInfo.cs

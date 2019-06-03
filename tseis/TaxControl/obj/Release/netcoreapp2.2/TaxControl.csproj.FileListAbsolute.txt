@@ -1,0 +1,3 @@
+C:\Users\Omar\Desktop\itonk\tseis\TaxControl\obj\Release\netcoreapp2.2\TaxControl.csproj.CoreCompileInputs.cache
+C:\Users\Omar\Desktop\itonk\tseis\TaxControl\obj\Release\netcoreapp2.2\TaxControl.AssemblyInfoInputs.cache
+C:\Users\Omar\Desktop\itonk\tseis\TaxControl\obj\Release\netcoreapp2.2\TaxControl.AssemblyInfo.cs

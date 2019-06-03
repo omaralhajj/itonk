@@ -5,7 +5,7 @@ metadata:
   labels:
     run: gr8stockbroker
   name: gr8stockbroker
-  namespace: default
+  namespace: gr8tseis
 spec:
   ports:
   - nodePort: 31058

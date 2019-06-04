@@ -13,17 +13,15 @@ namespace TaxControl.Controllers
     [Route("api/v1")]
     public class TaxControlController : Controller
     {
-        private readonly HttpClient httpClient;
-        private readonly HttpClient bankClient;
+        private readonly HttpClient stockTraderClient;
 
-        public TaxControlController(HttpClient httpClient, IHttpClientFactory clientFactory)
+        public TaxControlController(IHttpClientFactory clientFactory)
         {
-            this.httpClient = httpClient;
-            bankClient = clientFactory.CreateClient("bank");
+            stockTraderClient = clientFactory.CreateClient("stockTraderControl");
         }
 
         [HttpPost("tax")]
-        public async Task<IActionResult> DepositTaxPayment([FromBody] Models.Transaction transaction)
+        public async Task<IActionResult> DepositTaxPayment([FromBody] Transaction transaction)
         {
             Trader trader = new Trader();
             var tax = transaction.TransferValue * (decimal)0.01;
@@ -32,7 +30,7 @@ namespace TaxControl.Controllers
             var httpContent = JsonConvert.SerializeObject(trader);
             var byteContent = new ByteArrayContent(System.Text.Encoding.UTF8.GetBytes(httpContent));
 
-            using (var response = await bankClient.PostAsync($"api/v1/bank/{transaction.SellerID}", byteContent))
+            using (var response = await stockTraderClient.PostAsync($"api/v1/traders/{transaction.SellerID}", byteContent))
             {
                 await response.Content.ReadAsStringAsync();
             }

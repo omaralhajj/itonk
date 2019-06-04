@@ -14,15 +14,15 @@ namespace StockTransaction.Controllers
     [Route("api/v1")]
     public class TransactionsController : Controller
     {
-        private readonly HttpClient httpClient;
         public const string GetById = "GetById";
 
         private readonly TransactionsControllerContext _context;
+        private readonly HttpClient taxControlClient;
 
-        public TransactionsController(HttpClient httpClient, TransactionsControllerContext context)
+        public TransactionsController(TransactionsControllerContext context, IHttpClientFactory clientFactory)
         {
-            this.httpClient = httpClient;
             _context = context;
+            taxControlClient = clientFactory.CreateClient("taxControl");
         }
 
         // GET api/v1/transactions
@@ -36,8 +36,16 @@ namespace StockTransaction.Controllers
         [HttpPost("transactions")]
         public async Task<IActionResult> CreateTransaction([FromBody] [Required] Models.Transaction transaction)
         {
-            // request tax payment here
             transaction.TimeStamp = DateTime.Now;
+
+            var httpContent = JsonConvert.SerializeObject(transaction);
+            var byteContent = new ByteArrayContent(System.Text.Encoding.UTF8.GetBytes(httpContent));
+
+            using (var response = await taxControlClient.PostAsync("api/v1/tax", byteContent))
+            {
+                await response.Content.ReadAsStringAsync();
+            }
+
             _context.Transactions.Add(transaction);
             await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(Transaction), new { value = transaction.TransferValue }, transaction);

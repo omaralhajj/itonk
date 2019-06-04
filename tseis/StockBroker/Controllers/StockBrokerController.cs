@@ -19,10 +19,9 @@ namespace StockBroker.Controllers
 
         public StockBrokerController(IHttpClientFactory clientFactory)
         {
-            _clientFactory = clientFactory;
-            shareControlClient = _clientFactory.CreateClient("shareControl");
-            traderControlClient = _clientFactory.CreateClient("traderControl");
-            transactionControlClient = _clientFactory.CreateClient("transactionControl");
+            shareControlClient = clientFactory.CreateClient("shareControl");
+            traderControlClient = clientFactory.CreateClient("traderControl");
+            transactionControlClient = clientFactory.CreateClient("transactionControl");
         }
         
         [HttpPut("traders/{buyerId}/shares/buy")]
@@ -49,22 +48,13 @@ namespace StockBroker.Controllers
         }
 
         [HttpPut("traders/{sellerId}/shares/{shareId}/sell")]
-        public async Task<IActionResult> SellShare([FromRoute] int sellerId, [FromRoute] int shareId,
-            [FromBody] Share share)
+        public async Task<IActionResult> SellShare([FromRoute] int shareId, [FromBody] Share share)
         {
-            try
-            {
-                share.SharesForSale = true;
+            share.SharesForSale = true;
 
-                var updatedShare = await UpdateShare(share, shareId);
+            var updatedShare = await UpdateShare(share, shareId);
 
-                return Ok(updatedShare);
-            }
-
-            catch (Exception e)
-            {
-                return StatusCode(500);
-            }
+            return Ok(updatedShare);
         }
 
         private IEnumerable<Transaction> PrepareTransactions(IEnumerable<Share> shares, Trader buyer)

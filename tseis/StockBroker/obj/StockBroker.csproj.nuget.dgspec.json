@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Omar\\Desktop\\itonk\\tseis\\StockBroker\\StockBroker.csproj": {}
+    "C:\\Users\\omar-\\Desktop\\itonk\\tseis\\StockBroker\\StockBroker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Omar\\Desktop\\itonk\\tseis\\StockBroker\\StockBroker.csproj": {
+    "C:\\Users\\omar-\\Desktop\\itonk\\tseis\\StockBroker\\StockBroker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Omar\\Desktop\\itonk\\tseis\\StockBroker\\StockBroker.csproj",
+        "projectUniqueName": "C:\\Users\\omar-\\Desktop\\itonk\\tseis\\StockBroker\\StockBroker.csproj",
         "projectName": "StockBroker",
-        "projectPath": "C:\\Users\\Omar\\Desktop\\itonk\\tseis\\StockBroker\\StockBroker.csproj",
-        "packagesPath": "C:\\Users\\Omar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Omar\\Desktop\\itonk\\tseis\\StockBroker\\obj\\",
+        "projectPath": "C:\\Users\\omar-\\Desktop\\itonk\\tseis\\StockBroker\\StockBroker.csproj",
+        "packagesPath": "C:\\Users\\omar-\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\omar-\\Desktop\\itonk\\tseis\\StockBroker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Omar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\omar-\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,7 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.2": {

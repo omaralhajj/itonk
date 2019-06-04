@@ -12146,23 +12146,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Omar\\.nuget\\packages\\": {},
+    "C:\\Users\\omar-\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Omar\\Desktop\\itonk\\tseis\\TaxControl\\TaxControl.csproj",
+      "projectUniqueName": "C:\\Users\\omar-\\Desktop\\itonk\\tseis\\TaxControl\\TaxControl.csproj",
       "projectName": "TaxControl",
-      "projectPath": "C:\\Users\\Omar\\Desktop\\itonk\\tseis\\TaxControl\\TaxControl.csproj",
-      "packagesPath": "C:\\Users\\Omar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Omar\\Desktop\\itonk\\tseis\\TaxControl\\obj\\",
+      "projectPath": "C:\\Users\\omar-\\Desktop\\itonk\\tseis\\TaxControl\\TaxControl.csproj",
+      "packagesPath": "C:\\Users\\omar-\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\omar-\\Desktop\\itonk\\tseis\\TaxControl\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Omar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\omar-\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12170,7 +12170,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://www.nuget.org/api/v2/": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {

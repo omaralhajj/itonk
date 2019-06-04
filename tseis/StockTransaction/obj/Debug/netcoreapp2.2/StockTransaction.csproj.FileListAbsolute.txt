@@ -1,0 +1,14 @@
+C:\Users\omar-\Desktop\itonk\tseis\StockTransaction\bin\Debug\netcoreapp2.2\StockTransaction.deps.json
+C:\Users\omar-\Desktop\itonk\tseis\StockTransaction\bin\Debug\netcoreapp2.2\StockTransaction.runtimeconfig.json
+C:\Users\omar-\Desktop\itonk\tseis\StockTransaction\bin\Debug\netcoreapp2.2\StockTransaction.runtimeconfig.dev.json
+C:\Users\omar-\Desktop\itonk\tseis\StockTransaction\bin\Debug\netcoreapp2.2\StockTransaction.dll
+C:\Users\omar-\Desktop\itonk\tseis\StockTransaction\bin\Debug\netcoreapp2.2\StockTransaction.pdb
+C:\Users\omar-\Desktop\itonk\tseis\StockTransaction\obj\Debug\netcoreapp2.2\StockTransaction.csprojAssemblyReference.cache
+C:\Users\omar-\Desktop\itonk\tseis\StockTransaction\obj\Debug\netcoreapp2.2\StockTransaction.csproj.CoreCompileInputs.cache
+C:\Users\omar-\Desktop\itonk\tseis\StockTransaction\obj\Debug\netcoreapp2.2\StockTransaction.RazorAssemblyInfo.cache
+C:\Users\omar-\Desktop\itonk\tseis\StockTransaction\obj\Debug\netcoreapp2.2\StockTransaction.RazorAssemblyInfo.cs
+C:\Users\omar-\Desktop\itonk\tseis\StockTransaction\obj\Debug\netcoreapp2.2\StockTransaction.AssemblyInfoInputs.cache
+C:\Users\omar-\Desktop\itonk\tseis\StockTransaction\obj\Debug\netcoreapp2.2\StockTransaction.AssemblyInfo.cs
+C:\Users\omar-\Desktop\itonk\tseis\StockTransaction\obj\Debug\netcoreapp2.2\StockTransaction.RazorTargetAssemblyInfo.cache
+C:\Users\omar-\Desktop\itonk\tseis\StockTransaction\obj\Debug\netcoreapp2.2\StockTransaction.dll
+C:\Users\omar-\Desktop\itonk\tseis\StockTransaction\obj\Debug\netcoreapp2.2\StockTransaction.pdb

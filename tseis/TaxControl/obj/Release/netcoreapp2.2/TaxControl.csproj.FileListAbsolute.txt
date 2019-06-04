@@ -1,3 +1,17 @@
 C:\Users\Omar\Desktop\itonk\tseis\TaxControl\obj\Release\netcoreapp2.2\TaxControl.csproj.CoreCompileInputs.cache
 C:\Users\Omar\Desktop\itonk\tseis\TaxControl\obj\Release\netcoreapp2.2\TaxControl.AssemblyInfoInputs.cache
 C:\Users\Omar\Desktop\itonk\tseis\TaxControl\obj\Release\netcoreapp2.2\TaxControl.AssemblyInfo.cs
+C:\Users\omar-\Desktop\itonk\tseis\TaxControl\bin\Release\netcoreapp2.2\TaxControl.deps.json
+C:\Users\omar-\Desktop\itonk\tseis\TaxControl\bin\Release\netcoreapp2.2\TaxControl.runtimeconfig.json
+C:\Users\omar-\Desktop\itonk\tseis\TaxControl\bin\Release\netcoreapp2.2\TaxControl.runtimeconfig.dev.json
+C:\Users\omar-\Desktop\itonk\tseis\TaxControl\bin\Release\netcoreapp2.2\TaxControl.dll
+C:\Users\omar-\Desktop\itonk\tseis\TaxControl\bin\Release\netcoreapp2.2\TaxControl.pdb
+C:\Users\omar-\Desktop\itonk\tseis\TaxControl\obj\Release\netcoreapp2.2\TaxControl.csprojAssemblyReference.cache
+C:\Users\omar-\Desktop\itonk\tseis\TaxControl\obj\Release\netcoreapp2.2\TaxControl.csproj.CoreCompileInputs.cache
+C:\Users\omar-\Desktop\itonk\tseis\TaxControl\obj\Release\netcoreapp2.2\TaxControl.RazorAssemblyInfo.cache
+C:\Users\omar-\Desktop\itonk\tseis\TaxControl\obj\Release\netcoreapp2.2\TaxControl.RazorAssemblyInfo.cs
+C:\Users\omar-\Desktop\itonk\tseis\TaxControl\obj\Release\netcoreapp2.2\TaxControl.AssemblyInfoInputs.cache
+C:\Users\omar-\Desktop\itonk\tseis\TaxControl\obj\Release\netcoreapp2.2\TaxControl.AssemblyInfo.cs
+C:\Users\omar-\Desktop\itonk\tseis\TaxControl\obj\Release\netcoreapp2.2\TaxControl.RazorTargetAssemblyInfo.cache
+C:\Users\omar-\Desktop\itonk\tseis\TaxControl\obj\Release\netcoreapp2.2\TaxControl.dll
+C:\Users\omar-\Desktop\itonk\tseis\TaxControl\obj\Release\netcoreapp2.2\TaxControl.pdb

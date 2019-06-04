@@ -4,122 +4,55 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.ServiceFabric.Data;
-using Microsoft.ServiceFabric.Data.Collections;
-using Models;
-using Models.Exceptions;
-using Models.Exceptions.Base;
-using Utils.ControllerConfig;
-using Utils.Extensions;
+using Microsoft.EntityFrameworkCore;
+using StockTrader.Context;
+using StockTrader.Models;
 
-namespace Traders.Controllers
+namespace StockTrader.Controllers
 {
     [Route("api/v1")]
     public class TradersController : Controller
     {
-        public const string GetById = "GetById";
-
-        public IReliableStateManager StateManager { get; }
-
-        public TradersController(IReliableStateManager stateManager)
+        private readonly StockTraderContext _context;
+        public TradersController(StockTraderContext context)
         {
-            StateManager = stateManager;
+            _context = context;
         }
 
-        [HttpGet("traders/{id}", Name = GetById)]
-        public async Task<IActionResult> Get([FromRoute] Guid id)
+        [HttpGet("traders/{id}")]
+        public async Task<ActionResult<IEnumerable<Trader>>> GetTraderById([FromRoute] int id)
         {
-            var traderDictionary = await StateManager.GetOrAddAsync<IReliableDictionary<Guid, Trader>>("traders");
-
-            using (var transaction = StateManager.CreateTransaction())
-            {
-                var list = await traderDictionary.CreateEnumerableAsync(transaction);
-                var result = new Trader();
-
-                using (var enumerator = list.GetAsyncEnumerator())
-                {
-                    var cancellationToken = new CancellationToken();
-
-                    while (await enumerator.MoveNextAsync(cancellationToken))
-                    {
-                        if (enumerator.Current.Value.Id == id)
-                        {
-                            result = enumerator.Current.Value;
-                            break;
-                        }
-                    }
-                }
-
-                return new OkObjectResult(result);
-            }
+            return await _context.Traders.Where(trader => trader.ID == id).ToListAsync();
         }
 
         [HttpGet("traders")]
-        public async Task<IActionResult> GetAllTraders()
+        public async Task<ActionResult<IEnumerable<Trader>>> GetTraders()
         {
-            var traderDictionary = await StateManager.GetOrAddAsync<IReliableDictionary<Guid, Trader>>("traders");
-
-            using (var transaction = StateManager.CreateTransaction())
-            {
-                var list = await traderDictionary.CreateEnumerableAsync(transaction);
-                var result = new List<Trader>();
-
-                using (var enumerator = list.GetAsyncEnumerator())
-                {
-                    var cancellationToken = new CancellationToken();
-
-                    while (await enumerator.MoveNextAsync(cancellationToken))
-                    {
-                        result.Add(enumerator.Current.Value);
-                    }
-                }
-
-                return new OkObjectResult(result);
-            }
+            return await _context.Traders.ToListAsync();
         }
 
         [HttpPost("traders")]
-        public async Task<IActionResult> CreateTrader([FromBody] [Required] Trader trader)
+        public async Task<ActionResult<Trader>> CreateTrader([FromBody] [Required] Trader trader)
         {
-            try
-            {
-                var traderDictionary = await StateManager.GetOrAddAsync<IReliableDictionary<Guid, Trader>>("traders");
+            _context.Traders.Add(trader);
+            await _context.SaveChangesAsync();
 
-                trader.Id = Guid.NewGuid();
-
-                using (var transaction = StateManager.CreateTransaction())
-                {
-                    await traderDictionary.AddAsync(transaction, trader.Id, trader);
-                    await transaction.CommitAsync();
-                }
-
-                return new CreatedAtRouteResult(GetById, new { id = trader.Id }, trader);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, e);
-            }
+            return CreatedAtAction(nameof(Share), new { id = trader.ID }, trader);
         }
 
         [HttpPut("traders/{id}")]
-        public async Task<IActionResult> UpdateTraderCredit([FromRoute] Guid id, [FromBody] [Required] Trader trader)
+        public async Task<IActionResult> UpdateTrader([FromRoute] int id, [FromBody] [Required] Trader trader)
         {
-            if (id != trader.Id)
+            if (id != trader.ID)
             {
-                throw new TradersException(
-                    HttpErrorCode.BadRequest,
-                    $"The ID of the provided trader '{trader.Id}' " +
-                    $"does not correspond to the ID of the route '{id}'.");
+                return BadRequest();
             }
 
-            if (!await StateManager.TryUpdate("traders", id, trader))
-            {
-                throw new TradersException(HttpErrorCode.NotFound, $"Trader '{id}' not found.");
-            }
+            _context.Entry(trader).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
 
-            return Ok(trader);
+            return NoContent();
         }
 
     }

@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: 2019-03-14T16:17:45Z
+  labels:
+    run: gr8taxcontrol
+  name: gr8taxcontrol
+  namespace: gr8tseis
+spec:
+  ports:
+  - nodePort: 31052
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    run: gr8taxcontrol
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}

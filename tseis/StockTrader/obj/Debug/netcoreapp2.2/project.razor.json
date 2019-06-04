@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Omar\\Desktop\\itonk\\tseis\\StockBroker\\StockBroker.csproj",
+  "FilePath": "c:\\Users\\Omar\\Desktop\\itonk\\tseis\\StockTrader\\StockTrader.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2756,6 +2756,6 @@
     ],
     "CSharpLanguageVersion": 703
   },
-  "RootNamespace": "StockBroker",
+  "RootNamespace": "StockTrader",
   "Documents": []
 }

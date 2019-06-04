@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gr8sharedb
+  namespace: gr8tseis
+  resourceVersion: "8312787"
+spec:
+  ports:
+  - nodePort: 31048
+    port: 1433
+    protocol: TCP
+    targetPort: 1433
+  selector:
+    purpose: gr8sharedb
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}

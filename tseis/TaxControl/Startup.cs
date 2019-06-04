@@ -25,12 +25,12 @@ namespace TaxControl
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var stockTraderHost = "gr8stocktrader";
+            var stockTraderHost = Configuration["GR8STOCKTRADER_SERVICE_HOST"];
 
             services.AddHttpClient("stockTraderControl", c =>
             {
                 //Remark below not using https but http
-                c.BaseAddress = new Uri("http://" + stockTraderHost);
+                c.BaseAddress = new Uri("http://" + stockTraderHost + ":80/");
 
                 c.DefaultRequestHeaders.Add("Accept", "application/json");
 

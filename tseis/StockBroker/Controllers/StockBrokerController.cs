@@ -12,7 +12,6 @@ namespace StockBroker.Controllers
 {
     public class StockBrokerController : Controller
     {
-        private readonly IHttpClientFactory _clientFactory;
         private readonly HttpClient shareControlClient;
         private readonly HttpClient traderControlClient;
         private readonly HttpClient transactionControlClient;
@@ -24,30 +23,22 @@ namespace StockBroker.Controllers
             transactionControlClient = clientFactory.CreateClient("transactionControl");
         }
         
-        [HttpPut("traders/{buyerId}/shares/buy")]
+        [HttpPost("traders/{buyerId}/shares/buy")]
         public async Task<IActionResult> BuyShare([FromRoute] int buyerId, [FromBody] IEnumerable<Share> shares)
         {
-            try
-            {
-                var buyer = await GetTrader(buyerId);
-                var totalShareValue = shares.Select(x => x.Value).Sum();
-                var transactions = PrepareTransactions(shares, buyer);
-                var updatedShares = await UpdateShares(shares, buyer.ID);
-                buyer.Credit -= totalShareValue;
-                var updatedBuyer = await UpdateBuyer(buyer);
-                var updatedSellers = await UpdateSellers(shares);
-                var newTransactions = await RegisterTransactions(transactions);
+            var buyer = await GetTrader(buyerId);
+            var totalShareValue = shares.Select(x => x.Value).Sum();
+            var transactions = PrepareTransactions(shares, buyer);
+            var updatedShares = await UpdateShares(shares, buyer.ID);
+            buyer.Credit -= totalShareValue;
+            var updatedBuyer = await UpdateBuyer(buyer);
+            var updatedSellers = await UpdateSellers(shares);
+            var newTransactions = await RegisterTransactions(transactions);
 
-                return Ok(updatedShares);
-            }
-
-            catch (Exception e)
-            {
-                return StatusCode(500);
-            }
+            return Ok(updatedShares);
         }
 
-        [HttpPut("traders/{sellerId}/shares/{shareId}/sell")]
+        [HttpPost("traders/{sellerId}/shares/{shareId}/sell")]
         public async Task<IActionResult> SellShare([FromRoute] int shareId, [FromBody] Share share)
         {
             share.SharesForSale = true;
@@ -82,11 +73,11 @@ namespace StockBroker.Controllers
                     Value = share.Value,
                     SharesForSale = share.SharesForSale
                 };
-                
-                var httpContent = JsonConvert.SerializeObject(request);
-                var byteContent = new ByteArrayContent(System.Text.Encoding.UTF8.GetBytes(httpContent));
 
-                using (var response = await shareControlClient.PutAsync($"/api/v1/shares/{share.ID}", byteContent))
+                var json = JsonConvert.SerializeObject(request);
+                var httpContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+
+                using (var response = await shareControlClient.PutAsync($"/api/v1/shares/{share.ID}", httpContent))
                 {
 
                     result.Add(JsonConvert.DeserializeObject<Share>(
@@ -97,20 +88,17 @@ namespace StockBroker.Controllers
             return result;
         }
 
-        private async Task<Trader> UpdateBuyer(Trader trader)
+        private async Task<ActionResult> UpdateBuyer(Trader trader)
         {
-            var result = new Trader();
-            var httpContent = JsonConvert.SerializeObject(trader);
-            var byteContent = new ByteArrayContent(System.Text.Encoding.UTF8.GetBytes(httpContent));
+            var json = JsonConvert.SerializeObject(trader);
+            var httpContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
 
-            using (var response = await traderControlClient.PutAsync($"/api/v1/traders/{trader.ID}", byteContent))
+            using (var response = await traderControlClient.PutAsync($"/api/v1/traders/{trader.ID}", httpContent))
             {
-                result = JsonConvert.DeserializeObject<Trader>(
-                    await response.Content.ReadAsStringAsync()
-                );
+                await response.Content.ReadAsStringAsync();
             }
 
-            return result;
+            return NoContent();
         }
 
         private async Task<IEnumerable<Trader>> UpdateSellers(IEnumerable<Share> shares)
@@ -121,10 +109,10 @@ namespace StockBroker.Controllers
                 var trader = await GetTrader(share.TraderID);
                 trader.Credit += share.Value;
 
-                var httpContent = JsonConvert.SerializeObject(trader);
-                var byteContent = new ByteArrayContent(System.Text.Encoding.UTF8.GetBytes(httpContent));
+                var json = JsonConvert.SerializeObject(trader);
+                var httpContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
 
-                using (var response = await traderControlClient.PutAsync($"/api/v1/traders/{trader.ID}", byteContent))
+                using (var response = await traderControlClient.PutAsync($"/api/v1/traders/{trader.ID}", httpContent))
                 {
                     if (!result.Select(x => x.ID).Contains(trader.ID))
                     {
@@ -144,10 +132,10 @@ namespace StockBroker.Controllers
             var result = new List<Transaction>();
             foreach (var transaction in transactions)
             {
-                var httpContent = JsonConvert.SerializeObject(transaction);
-                var byteContent = new ByteArrayContent(System.Text.Encoding.UTF8.GetBytes(httpContent));
+                var json = JsonConvert.SerializeObject(transaction);
+                var httpContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
 
-                using (var response = await transactionControlClient.PostAsync("/api/v1/transactions", byteContent))
+                using (var response = await transactionControlClient.PostAsync("/api/v1/transactions", httpContent))
                 {
                     result.Add(JsonConvert.DeserializeObject<Transaction>(
                         await response.Content.ReadAsStringAsync())
@@ -169,19 +157,17 @@ namespace StockBroker.Controllers
             return result;
         }
 
-        private async Task<Share> UpdateShare(Share share, int shareId)
+        private async Task<ActionResult> UpdateShare(Share share, int shareId)
         {
-            var result = new Share();
-            var httpContent = JsonConvert.SerializeObject(share);
-            var byteContent = new ByteArrayContent(System.Text.Encoding.UTF8.GetBytes(httpContent));
+            var json = JsonConvert.SerializeObject(share);
+            var httpContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
 
-            using (var response = await shareControlClient.PutAsync($"/api/v1/shares/{shareId}", byteContent))
+            using (var response = await shareControlClient.PutAsync($"/api/v1/shares/{shareId}", httpContent))
             {
-                result = JsonConvert.DeserializeObject<Share>(
-                    await response.Content.ReadAsStringAsync()
-                );
-            }
-            return result;
+                await response.Content.ReadAsStringAsync();             
+            };
+
+            return NoContent();
         }
     }
 }

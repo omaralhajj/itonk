@@ -12,3 +12,17 @@ C:\Users\omar-\Desktop\tseis-vs\ShareControl\ShareControl\obj\Release\netcoreapp
 C:\Users\omar-\Desktop\tseis-vs\ShareControl\ShareControl\obj\Release\netcoreapp2.2\ShareControl.RazorTargetAssemblyInfo.cache
 C:\Users\omar-\Desktop\tseis-vs\ShareControl\ShareControl\obj\Release\netcoreapp2.2\ShareControl.dll
 C:\Users\omar-\Desktop\tseis-vs\ShareControl\ShareControl\obj\Release\netcoreapp2.2\ShareControl.pdb
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\bin\Release\netcoreapp2.2\ShareControl.deps.json
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\bin\Release\netcoreapp2.2\ShareControl.runtimeconfig.json
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\bin\Release\netcoreapp2.2\ShareControl.runtimeconfig.dev.json
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\bin\Release\netcoreapp2.2\ShareControl.dll
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\bin\Release\netcoreapp2.2\ShareControl.pdb
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Release\netcoreapp2.2\ShareControl.csprojAssemblyReference.cache
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Release\netcoreapp2.2\ShareControl.csproj.CoreCompileInputs.cache
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Release\netcoreapp2.2\ShareControl.RazorAssemblyInfo.cache
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Release\netcoreapp2.2\ShareControl.RazorAssemblyInfo.cs
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Release\netcoreapp2.2\ShareControl.AssemblyInfoInputs.cache
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Release\netcoreapp2.2\ShareControl.AssemblyInfo.cs
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Release\netcoreapp2.2\ShareControl.RazorTargetAssemblyInfo.cache
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Release\netcoreapp2.2\ShareControl.dll
+C:\Users\omar-\Desktop\itonk\tseis\ShareControl\obj\Release\netcoreapp2.2\ShareControl.pdb

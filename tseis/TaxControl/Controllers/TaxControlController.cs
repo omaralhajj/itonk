@@ -27,10 +27,10 @@ namespace TaxControl.Controllers
             var tax = transaction.TransferValue * (decimal)0.01;
             trader.Credit = trader.Credit - tax;
 
-            var httpContent = JsonConvert.SerializeObject(trader);
-            var byteContent = new ByteArrayContent(System.Text.Encoding.UTF8.GetBytes(httpContent));
+            var json = JsonConvert.SerializeObject(trader);
+            var httpContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
 
-            using (var response = await stockTraderClient.PostAsync($"api/v1/traders/{transaction.SellerID}", byteContent))
+            using (var response = await stockTraderClient.PutAsync($"api/v1/traders/{transaction.SellerID}", httpContent))
             {
                 await response.Content.ReadAsStringAsync();
             }

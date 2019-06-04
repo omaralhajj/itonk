@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace StockBroker
 {
@@ -25,14 +19,14 @@ namespace StockBroker
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-			var shareControlHost = "gr8sharecontrol";
-            var traderControlHost = "gr8tradercontrol";
-            var transactionControlHost = "gr8transactioncontrol";
+            var shareControlHost = Configuration["GR8SHARECONTROL_SERVICE_HOST"];
+            var traderControlHost = Configuration["GR8STOCKTRADER_SERVICE_HOST"];
+            var transactionControlHost = Configuration["GR8STOCKTRANSACTION_SERVICE_HOST"];
 
             services.AddHttpClient("shareControl", c =>
             {
                 //Remark below not using https but http
-                c.BaseAddress = new Uri("http://" + shareControlHost);
+                c.BaseAddress = new Uri("http://" + shareControlHost + ":80/");
 
                 c.DefaultRequestHeaders.Add("Accept", "application/json");
 
@@ -41,7 +35,7 @@ namespace StockBroker
             services.AddHttpClient("traderControl", c =>
             {
                 //Remark below not using https but http
-                c.BaseAddress = new Uri("http://" + traderControlHost);
+                c.BaseAddress = new Uri("http://" + traderControlHost + ":80/");
 
                 c.DefaultRequestHeaders.Add("Accept", "application/json");
 
@@ -50,7 +44,7 @@ namespace StockBroker
             services.AddHttpClient("transactionControl", c =>
             {
                 //Remark below not using https but http
-                c.BaseAddress = new Uri("http://" + transactionControlHost);
+                c.BaseAddress = new Uri("http://" + transactionControlHost + ":80/");
 
                 c.DefaultRequestHeaders.Add("Accept", "application/json");
 

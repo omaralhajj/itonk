@@ -14,8 +14,6 @@ namespace StockTransaction.Controllers
     [Route("api/v1")]
     public class TransactionsController : Controller
     {
-        public const string GetById = "GetById";
-
         private readonly TransactionsControllerContext _context;
         private readonly HttpClient taxControlClient;
 
@@ -38,10 +36,10 @@ namespace StockTransaction.Controllers
         {
             transaction.TimeStamp = DateTime.Now;
 
-            var httpContent = JsonConvert.SerializeObject(transaction);
-            var byteContent = new ByteArrayContent(System.Text.Encoding.UTF8.GetBytes(httpContent));
+            var json = JsonConvert.SerializeObject(transaction);
+            var httpContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
 
-            using (var response = await taxControlClient.PostAsync("api/v1/tax", byteContent))
+            using (var response = await taxControlClient.PostAsync("api/v1/tax", httpContent))
             {
                 await response.Content.ReadAsStringAsync();
             }

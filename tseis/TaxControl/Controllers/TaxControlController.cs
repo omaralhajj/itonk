@@ -34,7 +34,7 @@ namespace TaxControl.Controllers
             {
                 await response.Content.ReadAsStringAsync();
             }
-            return Ok();
+            return NoContent();
         }
     }
 }

@@ -54,7 +54,7 @@ namespace ShareControl.Controllers
 			_context.Shares.Add(item);
 			await _context.SaveChangesAsync();
 
-			return CreatedAtAction(nameof(Share), new { id = item.ID }, item);
+            return Ok(item);
 		}
 
 		// PUT: api/v1/shares/id

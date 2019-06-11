@@ -47,8 +47,8 @@ namespace ShareControl
                 app.UseHsts();
             }
             db.Database.Migrate();
-            app.UseHttpsRedirection();
-            app.UseMvc();
+			app.UseHttpsRedirection();
+			app.UseMvc();
         }
     }
 }

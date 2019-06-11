@@ -29,7 +29,7 @@ namespace StockBroker.Controllers
             var buyer = await GetTrader(buyerId);
             var totalShareValue = shares.Select(x => x.Value).Sum();
             var transactions = PrepareTransactions(shares, buyer);
-            var updatedShares = await UpdateShares(shares, buyer.ID);
+            var updatedShares = await UpdateShares(shares, buyerId);
             buyer.Credit -= totalShareValue;
             var updatedBuyer = await UpdateBuyer(buyer);
             var updatedSellers = await UpdateSellers(shares);
@@ -63,7 +63,6 @@ namespace StockBroker.Controllers
         private async Task<IEnumerable<Share>> UpdateShares(IEnumerable<Share> shares, int traderId)
         {
             var result = new List<Share>();
-
             foreach (var share in shares)
             {
                 var request = new Share

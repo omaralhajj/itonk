@@ -21,9 +21,9 @@ namespace StockTrader.Controllers
         }
 
         [HttpGet("traders/{id}")]
-        public async Task<ActionResult<IEnumerable<Trader>>> GetTraderById([FromRoute] int id)
+        public async Task<ActionResult<Trader>> GetTraderById([FromRoute] int id)
         {
-            return await _context.Traders.Where(trader => trader.ID == id).ToListAsync();
+            return await _context.Traders.SingleAsync(trader => trader.ID == id);
         }
 
         [HttpGet("traders")]
@@ -38,7 +38,7 @@ namespace StockTrader.Controllers
             _context.Traders.Add(trader);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(Share), new { id = trader.ID }, trader);
+            return Ok(trader);
         }
 
         [HttpPut("traders/{id}")]

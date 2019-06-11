@@ -46,7 +46,7 @@ namespace StockTransaction.Controllers
 
             _context.Transactions.Add(transaction);
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(Transaction), new { value = transaction.TransferValue }, transaction);
+            return Ok(transaction);
         }
     }
 }
